@@ -10,7 +10,7 @@ const db = new Sequelize({
 const URLs = db.define('urls', {
     id: {
         primaryKey: true,
-        type: DataTypes.INTEGER
+        type: DataTypes.BIGINT
     },
     code: {
         type: DataTypes.STRING(7),
@@ -23,5 +23,6 @@ const URLs = db.define('urls', {
 })
 
 module.exports = {
-    db
+    db,
+    URLs
 }
